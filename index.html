@@ -71,7 +71,7 @@
                     }]
                 });
             },
-// Capturar el pago cuando el usuario aprueba
+            // Capturar el pago cuando el usuario aprueba
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     alert('¡Pago completado exitosamente! Preparando tu descarga...');
@@ -97,7 +97,7 @@
                     })
                     .catch(err => {
                         console.error('Error de servidor:', err);
-                        alert('Hubo un error de conexión al entregar el archivo.');
+                        alert('Hubo un error de conexión al entregar el archivo. Verifica tu API de Vercel.');
                     });
                 });
             },
